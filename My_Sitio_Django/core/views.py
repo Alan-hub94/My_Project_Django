@@ -2,19 +2,22 @@ from django.shortcuts import render, HttpResponse
 
 # Create your views here.
 def home(request):
-    title = '<h1> Mi primera vista de Django </h1>'
-    content = ''
+    return render(request, 'core/home.html')
 
-    for i in range(10):
-        content += '<p> Yo soy un parrafo (for) en el ciclo: ' + str(i+1) + '<p>'
-    return HttpResponse(title + content)
+def title(request):
+    return render(request, 'core/title.html')
 
-def home(request):
-    title = '<h1> Homework </h1>'
-    about = '<p> about </p>'
-    portafolio = '<p> portafolio </p>'
-    contact = '<p> contacto </p>'
-    return HttpResponse(title + about + portafolio + contact)
+def about(request):
+    about = '<p> Hi, i´m Alan and i like programing and bla bla bla</p>'
+    return HttpResponse(about)
+
+def port(request):
+    portafolio = '<p> The languages than i´m learning: Python, Java, Lisp and Peeeeeerl </p>'
+    return HttpResponse(portafolio)
+
+def cont(request):
+    contact = '<p> Tel: 2281742 </p>'
+    return HttpResponse(contact)
 
 # Request => Solicitud
 # Response => Respuesta
