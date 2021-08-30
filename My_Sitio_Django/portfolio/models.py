@@ -1,9 +1,8 @@
-from core.views import title
 from django.db import models
 
 # Create your models here.
 
-class project(models.Model):
+class Project(models.Model):
     title = models.CharField(max_length=50)
     description = models.TextField()
     images = models.ImageField()
