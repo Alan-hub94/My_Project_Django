@@ -17,6 +17,7 @@ Including another URLconf
 # 2 3ros
 # 3 locales
 from django.contrib import admin
+from django.db.models import base
 from django.urls import path
 from core import views as core_views
 from portfolio import views as portfolio_views

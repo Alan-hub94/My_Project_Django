@@ -9,7 +9,7 @@
         <link rel="shorcut icon" type="image/png" href="{% static 'favicon.ico' %} "/>
         
 
-        <title>{% block title %}{%endblock%} | Jeremias Caceres</title>
+        <title>{% block title %}{% endblock %} | Alan Rios</title>
 
         <!-- Estilos y fuentes del template  -->
 
@@ -51,13 +51,13 @@
     </nav>
 
     <!-- Cabecera -->
-    <header class="masthead" style="background-image: url('{% block background %}{% endblock %}')">
+    <header class="masthead" style="background-image: url('{% block background %} {% endblock %}')">
         <div class="overlay"></div>
         <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
-                {% block headers %}{% endblock %}
+                {% block headers %} {% endblock %}
             </div>
             </div>
         </div>
